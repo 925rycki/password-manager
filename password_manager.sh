@@ -25,6 +25,7 @@ get_password() {
 
   result=$(grep $service_name $FILEPATH)
 
+  # 検索結果を:区切りで配列に格納
   if [ "$result" != "" ]; then
     IFS=':' read -ra parts <<< "$result"
 
